@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Header</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section Only -->
+    <header class="main-header">
+        <div href="index.html" class="logo">
+            <span class="logo-text">PORT<span>FOLIO</span></span>
+            <span class="logo-dot">.</span>
+            <span class="logo-pulse"></span>
+        </div>
+        
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li class="nav-item"><a href="aboutme.html" class="nav-link"><i class="fas fa-user"></i> <span>About Me</span></a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link"><i class="fas fa-code"></i> <span>My Projects</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-github"></i> <span>GitHub</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-youtube"></i> <span>YouTube</span></a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> <span>Contact Me</span></a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="name-title">
+                    <span class="name">QUAISER PERWEZ</span>
+                    <span class="title">Data Analysis Web Developer</span>
+                </h1>
+                <p class="hero-description">
+                    Transforming data into insights and building powerful web applications.
+                </p>
+                <div class="hero-buttons">
+                    <a href="images/Profile1.png" download class="btn hire-me">Download CV</a>
+                    <a href="#projects" class="btn projects-btn">View Projects</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container">
+                <div class="image-wrapper">
+                    <img src="/images/Profile1.png" alt="Quaiser Perwez" class="hero-image">
+                    <div class="image-border"></div>
+                    <div class="image-shadow"></div>
+                    <div class="floating-icons">
+                        <i class="fab fa-js"></i>
+                        <i class="fab fa-python"></i>
+                        <i class="fas fa-database"></i>
+                        <i class="fab fa-html5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+<section class="projects-section" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Showcasing my technical capabilities</p>
+        </div>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
+            <button class="filter-btn" data-filter="data">Data Analysis</button>
+            <button class="filter-btn" data-filter="react">React</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-category="web">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/600x400" alt="E-Commerce Dashboard" class="project-img">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="project-tag">Featured</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">E-Commerce Analytics Dashboard</h3>
+                    <p class="project-description">
+                        Full-stack dashboard with real-time sales analytics, customer insights, and inventory management.
+                    </p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Chart.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="data">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/600x400" alt="COVID-19 Tracker" class="project-img">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">COVID-19 Data Visualization</h3>
+                    <p class="project-description">
+                        Interactive visualization of pandemic data with predictive modeling and regional comparisons.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Matplotlib</span>
+                        <span>Tableau</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="react">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/600x400" alt="Task Manager" class="project-img">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Advanced Task Manager</h3>
+                    <p class="project-description">
+                        Productivity app with drag-n-drop interface, team collaboration, and progress tracking.
+                    </p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Redux</span>
+                        <span>Firebase</span>
+                        <span>Material UI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card" data-category="web">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/600x400" alt="Recipe App" class="project-img">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="project-tag">New</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">AI Recipe Generator</h3>
+                    <p class="project-description">
+                        Machine learning app that suggests recipes based on available ingredients and dietary preferences.
+                    </p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>TensorFlow</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card" data-category="data">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/600x400" alt="Stock Analysis" class="project-img">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Stock Market Predictor</h3>
+                    <p class="project-description">
+                        Predictive analytics tool using historical data and sentiment analysis from news sources.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>NumPy</span>
+                        <span>Scikit-learn</span>
+                        <span>BeautifulSoup</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card" data-category="react">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/600x400" alt="Social Media" class="project-img">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Social Media Dashboard</h3>
+                    <p class="project-description">
+                        Analytics platform for tracking engagement across multiple social networks with custom reporting.
+                    </p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-more">
+            <a href="#" class="btn btn-custom btn-view-more">
+                <span>View All Projects</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer class="footer-section">
+    <!-- Animated Waves Background -->
+    <div class="footer-waves">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+        <div class="wave wave-4"></div>
+    </div>
+
+    <div class="container">
+        <div class="footer-content">
+            <!-- Footer Logo -->
+            <div class="footer-logo">
+                <span class="logo-text">QuAiSeR</span>
+                <span class="logo-dot">.</span>
+                <p class="logo-slogan">Turning Ideas Into Digital Reality</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="aboutme.html"><i class="fas fa-chevron-right"></i> About Me</a></li>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div class="footer-tech">
+                <h3 class="footer-title">Technologies</h3>
+                <div class="tech-grid">
+                    <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="tech-item"><i class="fab fa-react"></i> React</div>
+                    <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
+                    <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h3 class="footer-title">Newsletter</h3>
+                <p>Subscribe for development tips and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="https://github.com/quaiser-perwez" class="social-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/quaiser-perwez-7b937b1b1/" class="social-link" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/quaiser_perwez_" class="social-link" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/solitude_seeker01/?hl=en" class="social-link" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" data-tooltip="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2003 <span>Quaiser Perwez</span>. All Rights Reserved.
+            </div>
+
+            <div class="back-to-top">
+                <a href="index.html" class="back-to-top-btn">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
