@@ -360,20 +360,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // 3D Effect on Form Container
     const formContainer = document.querySelector('.contact-form-container');
     
-    if (formContainer) {
-        formContainer.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
-            formContainer.querySelector('.contact-form').style.transform = `translateY(-10px) rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
-        });
+    // if (formContainer) {
+    //     formContainer.addEventListener('mousemove', (e) => {
+    //         const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+    //         const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+    //         formContainer.querySelector('.contact-form').style.transform = `translateY(-10px) rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
+    //     });
         
-        formContainer.addEventListener('mouseenter', () => {
-            formContainer.querySelector('.contact-form').style.transition = 'none';
-        });
+    //     formContainer.addEventListener('mouseenter', () => {
+    //         formContainer.querySelector('.contact-form').style.transition = 'none';
+    //     });
         
-        formContainer.addEventListener('mouseleave', () => {
-            formContainer.querySelector('.contact-form').style.transition = 'all 0.5s ease';
-            formContainer.querySelector('.contact-form').style.transform = 'translateY(-10px) rotateX(0deg) rotateY(0deg)';
-        });
-    }
+    //     formContainer.addEventListener('mouseleave', () => {
+    //         formContainer.querySelector('.contact-form').style.transition = 'all 0.5s ease';
+    //         formContainer.querySelector('.contact-form').style.transform = 'translateY(-10px) rotateX(0deg) rotateY(0deg)';
+    //     });
+    // }
 });
