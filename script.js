@@ -79,7 +79,7 @@ if (heroImage && imageWrapper) {
         document.querySelector('.image-border').style.animation = 'rotateBorder 8s linear infinite';
     });
 }
-// 3D Tilt Effect for About Image
+
 // 3D Hexagon Tilt Effect
 const hexagon = document.querySelector('.hexagon');
 
@@ -180,78 +180,68 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-// Contact Form Animation
+// Back to Top Button Animation
 document.addEventListener('DOMContentLoaded', function() {
-    const formGroups = document.querySelectorAll('.form-group');
+    const backToTopBtn = document.querySelector('.back-to-top-btn');
     
-    formGroups.forEach(group => {
-        const input = group.querySelector('input, textarea');
-        
-        input.addEventListener('focus', () => {
-            group.querySelector('.underline').style.width = '100%';
-        });
-        
-        input.addEventListener('blur', () => {
-            if (!input.value) {
-                group.querySelector('.underline').style.width = '0';
+    if (backToTopBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.opacity = '1';
+                backToTopBtn.style.visibility = 'visible';
+                backToTopBtn.style.transform = 'translateY(0)';
+            } else {
+                backToTopBtn.style.opacity = '0';
+                backToTopBtn.style.visibility = 'hidden';
+                backToTopBtn.style.transform = 'translateY(20px)';
             }
         });
-    });
-
-    // Form Submission
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        
+        backToTopBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Newsletter Form Submission
+    const newsletterForm = document.querySelector('.newsletter-form');
+    
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
             
-            const submitBtn = this.querySelector('.submit-btn');
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission
+            // Simulate submission
             setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                submitBtn.innerHTML = '<i class="fas fa-check"></i>';
+                this.reset();
                 
                 setTimeout(() => {
-                    submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
-                    submitBtn.disabled = false;
-                    this.reset();
-                    
-                    // Reset labels
-                    document.querySelectorAll('.form-group label').forEach(label => {
-                        if (!label.previousElementSibling.value) {
-                            label.style.top = '10px';
-                            label.style.fontSize = '1rem';
-                            label.style.color = '#777';
-                        }
-                    });
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i>';
                 }, 2000);
             }, 1500);
         });
     }
 
-    // 3D Effect on Form Container
-    // const formContainer = document.querySelector('.contact-form-container');
+    // Floating Tech Items
+    const techItems = document.querySelectorAll('.tech-item');
     
-//     if (formContainer) {
-//         formContainer.addEventListener('mousemove', (e) => {
-//             const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
-//             const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
-//             formContainer.querySelector('.contact-form').style.transform = `translateY(-10px) rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
-//         });
+    techItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 10px 20px rgba(0, 255, 136, 0.2)';
+        });
         
-//         formContainer.addEventListener('mouseenter', () => {
-//             formContainer.querySelector('.contact-form').style.transition = 'none';
-//         });
-        
-//         formContainer.addEventListener('mouseleave', () => {
-//             formContainer.querySelector('.contact-form').style.transition = 'all 0.5s ease';
-//             formContainer.querySelector('.contact-form').style.transform = 'translateY(-10px) rotateX(0deg) rotateY(0deg)';
-//         });
-//     }
-// });
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+    });
+});
 
 // Back to Top Button Animation
 document.addEventListener('DOMContentLoaded', function() {
@@ -314,4 +304,76 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.boxShadow = 'none';
         });
     });
+});
+
+// Contact Form Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const formGroups = document.querySelectorAll('.form-group');
+    
+    formGroups.forEach(group => {
+        const input = group.querySelector('input, textarea');
+        
+        input.addEventListener('focus', () => {
+            group.querySelector('.underline').style.width = '100%';
+        });
+        
+        input.addEventListener('blur', () => {
+            if (!input.value) {
+                group.querySelector('.underline').style.width = '0';
+            }
+        });
+    });
+
+    // Form Submission
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+                    submitBtn.disabled = false;
+                    this.reset();
+                    
+                    // Reset labels
+                    document.querySelectorAll('.form-group label').forEach(label => {
+                        if (!label.previousElementSibling.value) {
+                            label.style.top = '10px';
+                            label.style.fontSize = '1rem';
+                            label.style.color = '#777';
+                        }
+                    });
+                }, 2000);
+            }, 1500);
+        });
+    }
+
+    // 3D Effect on Form Container
+    const formContainer = document.querySelector('.contact-form-container');
+    
+    if (formContainer) {
+        formContainer.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+            formContainer.querySelector('.contact-form').style.transform = `translateY(-10px) rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
+        });
+        
+        formContainer.addEventListener('mouseenter', () => {
+            formContainer.querySelector('.contact-form').style.transition = 'none';
+        });
+        
+        formContainer.addEventListener('mouseleave', () => {
+            formContainer.querySelector('.contact-form').style.transition = 'all 0.5s ease';
+            formContainer.querySelector('.contact-form').style.transform = 'translateY(-10px) rotateX(0deg) rotateY(0deg)';
+        });
+    }
 });
